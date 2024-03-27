@@ -8,7 +8,7 @@ let favtMoviesList = [];
 let recommendedMoviesList = [];
 
 function getPhotos(userValue) {
-  const API_KEY = "YOUR_API_KEY"; // Replace with your actual Pexels API key
+  const API_KEY = "rakVZ84e4ueEcJDOZiR23XPAEw25CGdfCO61jybSvCxygXTC423MpOrD";
   const perPage = 10;
 
   const url = `https://api.pexels.com/v1/search?query=${userValue}&per_page=${perPage}`;
