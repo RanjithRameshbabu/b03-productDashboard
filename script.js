@@ -47,7 +47,7 @@ function getPhotos(userValue) {
         
 
         <div class="search-photo-content">
-          <h1 class="search-photo-title">${photoObject.photographer}</h1>
+          <h1 class="search-photo-title">${photoObject.alt}</h1>
           <p class="photographer-name">${photoObject.photographer}</p>
           <button class="photo-btn poster-watch-button">Explore</button>
         </div>
