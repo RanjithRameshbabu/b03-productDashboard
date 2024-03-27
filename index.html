@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+    " defer></script>
+    <link
+    href="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="product-dashboard">
+      <div class="main-header">
+        <h3>SUPER SALE UPTO 40% OFF</h3>
+      </div>
+      <header class="header">
+        <div class="nav-header-left">
+          <a href="#shop">Shop</a>
+          <a href="#community">Community</a>
+        </div>
+        <div>
+          <img class="logo-img" src="./images/logo.png" />
+        </div>
+
+        <div class="nav-header-right">
+          <img class="profile-img" src="./images/profile_icon.png" />
+          <img class="search-img" src="./images/search_icon.png" />
+          <img class="cart-img" src="./images/cart_icon.png" />
+        </div>
+      </header>
+
+      <div class="poster-section">
+        <img
+          src="./images/Poster.png"
+          class="poster-img"
+          alt="john-wick-poster"
+        />
+        <div class="poster-content">
+          <h1 class="poster-heading">John Wick 3 : Parabellum</h1>
+          <p class="poster-description">
+            John Wick is on the run after killing a member of the international
+            assassins' guild, and with a $14 million price tag on his head, he
+            is the target of hit men and women everywhere.
+          </p>
+          <button class="poster-watch-button">
+            <img
+              class="poster-watch-button-play-icon"
+              src="./images/play icon.png"
+            />WATCH TRAILER <a href=""></a>
+          </button>
+        </div>
+
+        <div class="results-section">
+            <div class="search-section">
+              <input
+                type="search"
+                class="search-input-box"
+                placeholder="What do you want to search?"
+                id="searchBox"
+              />
+              <img class="search-icon-img" src="./images/search.png" />
+            </div>
+            
+
+      <div class="search-results-section" id="searchResultsSection">
+        <img
+          class="search-photo"
+          src="https://images.pexels.com/photos/5614135/pexels-photo-5614135.jpeg"
+          alt=""
+        />
+        <div class="search-photo-content">
+          <h1 class="search-photo-title">A Woman Sitting With laptop</h1>
+          <p class="photographer-name">Anna Shvets</p>
+          <button class="photo-btn poster-watch-button">Explore</button>
+        </div>
+      </div>
+
+      <div class="recommended-photos-section">
+        <h1 class="recommended-photos-heading">Recommended photos</h1>
+        <section
+          class="splide"
+          id="carousel1"
+          aria-label="Splide Basic HTML Example"
+        >
+          <div class="splide__track">
+            <ul class="splide__list" id="carouselList1">
+                
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="favorite-photos-section">
+        <div class="filter-section">
+          <h1 class="filter-photos-heading">Favorites List</h1>
+          <select class="drop-down-options" id="dropDown">
+            <option class="option" value="sort">Sort</option>
+            <option class="option" value="name">Sort By Name</option>
+          </select>
+        </div>
+        <section
+          class="splide"
+          id="carousel2"
+          aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list" id="carouselList2"></ul>
+          </div>
+        </section>
+      </div>
+        </div>
+  </body>
+</html>

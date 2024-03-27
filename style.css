@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* list-style-type: none; */
+  font-family: sans-serif;
+}
+
+.product-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #231f20;
+  color: white;
+  height: 5vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  height: 5vh;
+}
+.nav-header-left {
+  text-decoration: none;
+  padding: auto;
+}
+
+.logo-img {
+  height: 26px;
+}
+
+.poster-img {
+  width: 100%;
+}
+
+.poster-content {
+  position: absolute;
+  top: 40%;
+  left: 100px;
+}
+
+.poster-heading {
+  color: #fff;
+  font-size: 45px;
+}
+
+.poster-description {
+  max-width: 400px;
+  color: #fff;
+  font-size: 18px;
+  margin: 15px 0 15px 0;
+}
+
+.poster-watch-button {
+  background-color: #be123c;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 16px;
+  column-gap: 8px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.search-input-box {
+  width: 100%;
+  border: none;
+  height: 35px;
+  border-radius: 5px;
+  padding: 0 5px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.results-section {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.search-section {
+  align-self: center;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  border: 2px solid red;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 25px;
+  padding-right: 10px;
+}
+
+.search-input-box {
+  width: 100%;
+  border: none;
+  height: 35px;
+  border-radius: 5px;
+  padding: 0 5px;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.search-icon-img {
+  cursor: pointer;
+}
+
+.search-results-section {
+  display: flex;
+  margin-top: 30px;
+  column-gap: 30px;
+}
+
+.search-movie {
+  height: 400px;
+}
+
+.search-photo {
+  width: 200px;
+  height: auto;
+}
+
+.splide__slide {
+  position: relative;
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.search-photo-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  row-gap: 10px;
+}
+
+.photo-btn {
+  max-width: 120px;
+}
+
+.splide-list-item {
+  height: 30vh;
+}
+
+.splide-list-item img {
+  width: 100%;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
