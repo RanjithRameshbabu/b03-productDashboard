@@ -4,8 +4,8 @@ let dropDownEl = document.querySelector("#dropDown");
 
 let inputEl = document.querySelector("#searchBox");
 
-let favtMoviesList = [];
-let recommendedMoviesList = [];
+let favtList = [];
+let recommendedList = [];
 
 function getPhotos(userValue) {
   const API_KEY = "rakVZ84e4ueEcJDOZiR23XPAEw25CGdfCO61jybSvCxygXTC423MpOrD";
@@ -42,9 +42,7 @@ function getPhotos(userValue) {
           src=${photoObject.src.original}
           alt=""
           data-photo-id="${photoObject.id}"
-        />
-
-        
+        />    
 
         <div class="search-photo-content">
           <h1 class="search-photo-title">${photoObject.alt}</h1>
@@ -65,12 +63,12 @@ function getPhotos(userValue) {
       liEl.classList.add("splide__slide", "splide-list-item");
       img.src = photo.src.medium;
       img.alt = photo.photographer;
-      img.setAttribute("data-photo-id", photo.id); // Add photo id as data attribute
+      img.setAttribute("data-photo-id", photo.id);
       favoriteIcon.classList.add("favorite-icon");
-      favoriteIcon.setAttribute("data-photo-id", photo.id); // Add photo id as data attribute to favorite icon
-      favoriteIcon.innerHTML = "&#x2661;"; // Heart symbol
+      favoriteIcon.setAttribute("data-photo-id", photo.id);
+      favoriteIcon.innerHTML = "&#x2661;";
       liEl.appendChild(img);
-      liEl.appendChild(favoriteIcon); // Append favorite icon to the slide
+      liEl.appendChild(favoriteIcon);
       photoContainer.appendChild(liEl);
     });
 
@@ -78,26 +76,45 @@ function getPhotos(userValue) {
   }
 }
 
+// Event listener for adding to favorites
+carouselList1El.addEventListener("click", addToFavorites);
+
+// Event listener for removing from favorites
+carouselList2El.addEventListener("click", removeFromFavorites);
+
 function addToFavorites(event) {
   const clickedElement = event.target;
   if (clickedElement.classList.contains("favorite-icon")) {
-    const photoId = clickedElement.getAttribute("data-photo-id");
     const slideToRemove = clickedElement.closest(".splide__slide");
-    const slideClone = slideToRemove.cloneNode(true);
 
-    // Modify favorite icon in the cloned slide to red
-    const favoriteIcon = slideClone.querySelector(".favorite-icon");
+    // Modify favorite icon in the slide to red
+    const favoriteIcon = slideToRemove.querySelector(".favorite-icon");
     favoriteIcon.style.color = "red";
 
-    carouselList2El.appendChild(slideClone); // Add cloned slide to favorites
+    // Append the slide to the favorites list
+    carouselList2El.appendChild(slideToRemove);
+
     // Remount Splide instance for the favorites carousel
-    if (!splide2.initialized) {
-      splide2.mount();
-    } else {
-      splide2.refresh();
-    }
+    splide2.mount();
   }
 }
+
+function removeFromFavorites(event) {
+  const clickedElement = event.target;
+  if (clickedElement.classList.contains("favorite-icon")) {
+    const slideToRemove = clickedElement.closest(".splide__slide");
+    const favoriteIcon = slideToRemove.querySelector(".favorite-icon");
+    favoriteIcon.style.color = "";
+
+    // Append the slide back to the main carousel
+    carouselList1El.appendChild(slideToRemove);
+
+    // Remount Splide instance for the main carousel
+    splide1.refresh();
+  }
+}
+
+// Initialize Splide instances
 
 function getData(e) {
   console.log(e.target.value);
@@ -129,7 +146,7 @@ let splide2 = new Splide("#carousel2", {
     },
   },
 });
-
+// splide2.mount();
 inputEl.addEventListener("change", getData);
 
 carouselList1El.addEventListener("click", addToFavorites);
