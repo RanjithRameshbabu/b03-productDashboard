@@ -128,6 +128,11 @@
 .search-movie {
   height: 400px;
 }
+.splide__list {
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
 
 .search-photo {
   width: 300px;
@@ -165,6 +170,7 @@
 
 .splide-list-item img {
   width: 100%;
+  height: 100%;
 }
 
 .filter-section {
@@ -187,7 +193,7 @@
   }
 
   .poster-content {
-    top: 30%;
+    top: 20%;
     left: 50px;
   }
 
@@ -213,7 +219,7 @@
   }
 }
 
-@media only screen and (max-width: 525px) {
+@media screen and (max-width: 525px) {
   .search-section {
     width: 50%;
   }

@@ -124,6 +124,7 @@ function getData(e) {
 let splide1 = new Splide("#carousel1", {
   pagination: false,
   perPage: 4,
+  gap: 25,
   breakpoints: {
     425: {
       perPage: 2,
@@ -137,6 +138,8 @@ let splide1 = new Splide("#carousel1", {
 let splide2 = new Splide("#carousel2", {
   pagination: false,
   perPage: 4,
+  gap: 25,
+
   breakpoints: {
     425: {
       perPage: 2,
@@ -150,3 +153,4 @@ let splide2 = new Splide("#carousel2", {
 inputEl.addEventListener("change", getData);
 
 carouselList1El.addEventListener("click", addToFavorites);
+// carouselList2El.addEventListener("click", removeFromFavorites);
